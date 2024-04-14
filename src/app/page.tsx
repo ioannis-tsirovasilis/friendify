@@ -2,112 +2,167 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <div className="w-full flex flex-row flex-wrap">
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+
+      <div className="w-full bg-indigo-100 h-screen flex flex-row flex-wrap justify-center ">
+        <div className="bg-white shadow-lg border-t-4 border-indigo-500 absolute bottom-0 w-full md:w-0 md:hidden flex flex-row flex-wrap">
+          <div className="w-full text-right">
+            <button className="p-2 fa fa-bars text-4xl text-gray-600"></button>
+          </div>
+        </div>
+
+        <div className="w-0 md:w-1/4 lg:w-1/5 h-0 md:h-screen overflow-y-hidden bg-white shadow-lg">
+          <div className="p-5 bg-white sticky top-0">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              width={300}
+              height={300}
+              alt="profile image"
+              className="border border-indigo-100 shadow-lg round"
+              src=""
             />
-          </a>
+            <div className="pt-2 border-t mt-5 w-full text-center text-xl text-gray-600">
+              Some Person
+            </div>
+          </div>
+          <div className="w-full h-screen antialiased flex flex-col hover:cursor-pointer">
+            <a
+              className="hover:bg-gray-300 bg-gray-200 border-t-2 p-3 w-full text-xl text-left text-gray-600 font-semibold"
+              href=""
+            >
+              <i className="fa fa-comment text-gray-600 text-2xl pr-1 pt-1 float-right"></i>
+              Messages
+            </a>
+            <a
+              className="hover:bg-gray-300 bg-gray-200 border-t-2 p-3 w-full text-xl text-left text-gray-600 font-semibold"
+              href=""
+            >
+              <i className="fa fa-cog text-gray-600 text-2xl pr-1 pt-1 float-right"></i>
+              Settings
+            </a>
+            <a
+              className="hover:bg-gray-300 bg-gray-200 border-t-2 p-3 w-full text-xl text-left text-gray-600 font-semibold"
+              href=""
+            >
+              <i className="fa fa-arrow-left text-gray-600 text-2xl pr-1 pt-1 float-right"></i>
+              Log out
+            </a>
+          </div>
+        </div>
+
+        <div className="w-full md:w-3/4 lg:w-4/5 p-5 md:px-12 lg:24 h-full overflow-x-scroll antialiased">
+          <div className="bg-white w-full shadow rounded-lg p-5">
+            <textarea
+              className="bg-gray-200 w-full rounded-lg shadow border p-2"
+              rows={5}
+              placeholder="Speak your mind"
+            ></textarea>
+
+            <div className="w-full flex flex-row justify-end flex-wrap mt-3">
+              <div className="w-2/3">
+                <button
+                  type="button"
+                  className="float-right bg-indigo-400 hover:bg-indigo-300 text-white p-2 rounded-lg"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-3 flex flex-col">
+            <div className="bg-white mt-3">
+              <Image
+                width={500}
+                height={500}
+                alt="image post"
+                className="border rounded-t-lg shadow-lg "
+                src=""
+              />
+              <div className="bg-white border shadow p-5 text-xl text-gray-700 font-semibold">
+                A Pretty Cool photo from the mountains. Image credit to
+                @danielmirlea on Unsplash.
+              </div>
+              <div className="bg-white p-1 border shadow flex flex-row flex-wrap">
+                <div className="w-1/3 hover:bg-gray-200 text-center text-xl text-gray-700 font-semibold">
+                  Like
+                </div>
+                <div className="w-1/3 hover:bg-gray-200 border-l-4 border-r- text-center text-xl text-gray-700 font-semibold">
+                  Share
+                </div>
+                <div className="w-1/3 hover:bg-gray-200 border-l-4 text-center text-xl text-gray-700 font-semibold">
+                  Comment
+                </div>
+              </div>
+
+              <div className="bg-white border-4 bg-gray-300 border-white rounded-b-lg shadow p-5 text-xl text-gray-700 content-center font-semibold flex flex-row flex-wrap">
+                <div className="w-full">
+                  <div className="w-full text-left text-xl text-gray-600">
+                    @Some Person
+                  </div>
+                  A Pretty Cool photo from the mountains. Image credit to
+                  @danielmirlea on Unsplash. A Pretty Cool photo from the
+                  mountains. Image credit to @danielmirlea on Unsplash.
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white mt-3">
+              <Image
+                width={500}
+                height={500}
+                alt="image post"
+                className="border rounded-t-lg shadow-lg "
+                src=""
+              />
+              <div className="bg-white border shadow p-5 text-xl text-gray-700 font-semibold">
+                A Pretty Cool photo from the mountains. Image credit to
+                @danielmirlea on Unsplash.
+              </div>
+              <div className="bg-white p-1 rounded-b-lg border shadow flex flex-row flex-wrap">
+                <div className="w-1/3 hover:bg-gray-200 text-center text-xl text-gray-700 font-semibold">
+                  Like
+                </div>
+                <div className="w-1/3 hover:bg-gray-200 border-l-4 border-r- text-center text-xl text-gray-700 font-semibold">
+                  Share
+                </div>
+                <div className="w-1/3 hover:bg-gray-200 border-l-4 text-center text-xl text-gray-700 font-semibold">
+                  Comment
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white mt-3">
+              <Image
+                width={500}
+                height={500}
+                alt="image post"
+                className="border rounded-t-lg shadow-lg "
+                src=""
+              />
+              <div className="bg-white border shadow p-5 text-xl text-gray-700 font-semibold">
+                A Pretty Cool photo from the mountains. Image credit to
+                @danielmirlea on Unsplash.
+              </div>
+              <div className="bg-white p-1 rounded-b-lg border shadow flex flex-row flex-wrap">
+                <div className="w-1/3 hover:bg-gray-200 text-center text-xl text-gray-700 font-semibold">
+                  Like
+                </div>
+                <div className="w-1/3 hover:bg-gray-200 border-l-4 border-r- text-center text-xl text-gray-700 font-semibold">
+                  Share
+                </div>
+                <div className="w-1/3 hover:bg-gray-200 border-l-4 text-center text-xl text-gray-700 font-semibold">
+                  Comment
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }
